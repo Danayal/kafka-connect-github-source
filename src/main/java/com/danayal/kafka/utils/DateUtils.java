@@ -1,4 +1,4 @@
-package com.simplesteph.kafka.utils;
+package com.danayal.kafka.utils;
 
 import java.time.Instant;
 

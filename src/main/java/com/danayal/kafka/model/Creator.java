@@ -1,14 +1,10 @@
 
-package com.simplesteph.kafka.model;
-
-import org.json.JSONObject;
+package com.danayal.kafka.model;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.simplesteph.kafka.GitHubSchemas.*;
-
-public class User {
+public class Creator {
 
     private String login;
     private Integer id;
@@ -33,7 +29,7 @@ public class User {
      * No args constructor for use in serialization
      * 
      */
-    public User() {
+    public Creator() {
     }
 
     /**
@@ -56,7 +52,7 @@ public class User {
      * @param organizationsUrl
      * @param starredUrl
      */
-    public User(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
+    public Creator(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
         super();
         this.login = login;
         this.id = id;
@@ -85,7 +81,7 @@ public class User {
         this.login = login;
     }
 
-    public User withLogin(String login) {
+    public Creator withLogin(String login) {
         this.login = login;
         return this;
     }
@@ -98,7 +94,7 @@ public class User {
         this.id = id;
     }
 
-    public User withId(Integer id) {
+    public Creator withId(Integer id) {
         this.id = id;
         return this;
     }
@@ -111,7 +107,7 @@ public class User {
         this.avatarUrl = avatarUrl;
     }
 
-    public User withAvatarUrl(String avatarUrl) {
+    public Creator withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
     }
@@ -124,7 +120,7 @@ public class User {
         this.gravatarId = gravatarId;
     }
 
-    public User withGravatarId(String gravatarId) {
+    public Creator withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
     }
@@ -137,7 +133,7 @@ public class User {
         this.url = url;
     }
 
-    public User withUrl(String url) {
+    public Creator withUrl(String url) {
         this.url = url;
         return this;
     }
@@ -150,7 +146,7 @@ public class User {
         this.htmlUrl = htmlUrl;
     }
 
-    public User withHtmlUrl(String htmlUrl) {
+    public Creator withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
     }
@@ -163,7 +159,7 @@ public class User {
         this.followersUrl = followersUrl;
     }
 
-    public User withFollowersUrl(String followersUrl) {
+    public Creator withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
     }
@@ -176,7 +172,7 @@ public class User {
         this.followingUrl = followingUrl;
     }
 
-    public User withFollowingUrl(String followingUrl) {
+    public Creator withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
     }
@@ -189,7 +185,7 @@ public class User {
         this.gistsUrl = gistsUrl;
     }
 
-    public User withGistsUrl(String gistsUrl) {
+    public Creator withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
     }
@@ -202,7 +198,7 @@ public class User {
         this.starredUrl = starredUrl;
     }
 
-    public User withStarredUrl(String starredUrl) {
+    public Creator withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
     }
@@ -215,7 +211,7 @@ public class User {
         this.subscriptionsUrl = subscriptionsUrl;
     }
 
-    public User withSubscriptionsUrl(String subscriptionsUrl) {
+    public Creator withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
     }
@@ -228,7 +224,7 @@ public class User {
         this.organizationsUrl = organizationsUrl;
     }
 
-    public User withOrganizationsUrl(String organizationsUrl) {
+    public Creator withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
     }
@@ -241,7 +237,7 @@ public class User {
         this.reposUrl = reposUrl;
     }
 
-    public User withReposUrl(String reposUrl) {
+    public Creator withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
     }
@@ -254,7 +250,7 @@ public class User {
         this.eventsUrl = eventsUrl;
     }
 
-    public User withEventsUrl(String eventsUrl) {
+    public Creator withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
     }
@@ -267,7 +263,7 @@ public class User {
         this.receivedEventsUrl = receivedEventsUrl;
     }
 
-    public User withReceivedEventsUrl(String receivedEventsUrl) {
+    public Creator withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
     }
@@ -280,7 +276,7 @@ public class User {
         this.type = type;
     }
 
-    public User withType(String type) {
+    public Creator withType(String type) {
         this.type = type;
         return this;
     }
@@ -293,7 +289,7 @@ public class User {
         this.siteAdmin = siteAdmin;
     }
 
-    public User withSiteAdmin(Boolean siteAdmin) {
+    public Creator withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
     }
@@ -306,17 +302,9 @@ public class User {
         this.additionalProperties.put(name, value);
     }
 
-    public User withAdditionalProperty(String name, Object value) {
+    public Creator withAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
         return this;
     }
 
-    public static User fromJson(JSONObject jsonObject) {
-        User user = new User();
-        user.setUrl(jsonObject.getString(USER_URL_FIELD));
-        user.setHtmlUrl(jsonObject.getString(USER_HTML_URL_FIELD));
-        user.setId(jsonObject.getInt(USER_ID_FIELD));
-        user.setLogin(jsonObject.getString(USER_LOGIN_FIELD));
-        return user;
-    }
 }

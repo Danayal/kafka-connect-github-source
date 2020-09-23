@@ -1,4 +1,4 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
 /**
  * Created by jeremy on 5/3/16.

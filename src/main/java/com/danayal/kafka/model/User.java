@@ -1,10 +1,13 @@
 
-package com.simplesteph.kafka.model;
+package com.danayal.kafka.model;
+
+import com.danayal.kafka.GitHubSchemas;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Assignee {
+public class User {
 
     private String login;
     private Integer id;
@@ -29,7 +32,7 @@ public class Assignee {
      * No args constructor for use in serialization
      * 
      */
-    public Assignee() {
+    public User() {
     }
 
     /**
@@ -52,7 +55,7 @@ public class Assignee {
      * @param organizationsUrl
      * @param starredUrl
      */
-    public Assignee(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
+    public User(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
         super();
         this.login = login;
         this.id = id;
@@ -81,7 +84,7 @@ public class Assignee {
         this.login = login;
     }
 
-    public Assignee withLogin(String login) {
+    public User withLogin(String login) {
         this.login = login;
         return this;
     }
@@ -94,7 +97,8 @@ public class Assignee {
         this.id = id;
     }
 
-    public Assignee withId(Integer id) {
+
+    public User withId(Integer id) { //with does the same thing as set but returns a reference to this object which allows you to chain commands
         this.id = id;
         return this;
     }
@@ -107,7 +111,7 @@ public class Assignee {
         this.avatarUrl = avatarUrl;
     }
 
-    public Assignee withAvatarUrl(String avatarUrl) {
+    public User withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
     }
@@ -120,7 +124,7 @@ public class Assignee {
         this.gravatarId = gravatarId;
     }
 
-    public Assignee withGravatarId(String gravatarId) {
+    public User withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
     }
@@ -133,7 +137,7 @@ public class Assignee {
         this.url = url;
     }
 
-    public Assignee withUrl(String url) {
+    public User withUrl(String url) {
         this.url = url;
         return this;
     }
@@ -146,7 +150,7 @@ public class Assignee {
         this.htmlUrl = htmlUrl;
     }
 
-    public Assignee withHtmlUrl(String htmlUrl) {
+    public User withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
     }
@@ -159,7 +163,7 @@ public class Assignee {
         this.followersUrl = followersUrl;
     }
 
-    public Assignee withFollowersUrl(String followersUrl) {
+    public User withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
     }
@@ -172,7 +176,7 @@ public class Assignee {
         this.followingUrl = followingUrl;
     }
 
-    public Assignee withFollowingUrl(String followingUrl) {
+    public User withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
     }
@@ -185,7 +189,7 @@ public class Assignee {
         this.gistsUrl = gistsUrl;
     }
 
-    public Assignee withGistsUrl(String gistsUrl) {
+    public User withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
     }
@@ -198,7 +202,7 @@ public class Assignee {
         this.starredUrl = starredUrl;
     }
 
-    public Assignee withStarredUrl(String starredUrl) {
+    public User withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
     }
@@ -211,7 +215,7 @@ public class Assignee {
         this.subscriptionsUrl = subscriptionsUrl;
     }
 
-    public Assignee withSubscriptionsUrl(String subscriptionsUrl) {
+    public User withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
     }
@@ -224,7 +228,7 @@ public class Assignee {
         this.organizationsUrl = organizationsUrl;
     }
 
-    public Assignee withOrganizationsUrl(String organizationsUrl) {
+    public User withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
     }
@@ -237,7 +241,7 @@ public class Assignee {
         this.reposUrl = reposUrl;
     }
 
-    public Assignee withReposUrl(String reposUrl) {
+    public User withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
     }
@@ -250,7 +254,7 @@ public class Assignee {
         this.eventsUrl = eventsUrl;
     }
 
-    public Assignee withEventsUrl(String eventsUrl) {
+    public User withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
     }
@@ -263,7 +267,7 @@ public class Assignee {
         this.receivedEventsUrl = receivedEventsUrl;
     }
 
-    public Assignee withReceivedEventsUrl(String receivedEventsUrl) {
+    public User withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
     }
@@ -276,7 +280,7 @@ public class Assignee {
         this.type = type;
     }
 
-    public Assignee withType(String type) {
+    public User withType(String type) {
         this.type = type;
         return this;
     }
@@ -289,7 +293,7 @@ public class Assignee {
         this.siteAdmin = siteAdmin;
     }
 
-    public Assignee withSiteAdmin(Boolean siteAdmin) {
+    public User withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
     }
@@ -302,9 +306,17 @@ public class Assignee {
         this.additionalProperties.put(name, value);
     }
 
-    public Assignee withAdditionalProperty(String name, Object value) {
+    public User withAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
         return this;
     }
 
+    public static User fromJson(JSONObject jsonObject) {
+        User user = new User();
+        user.setUrl(jsonObject.getString(GitHubSchemas.USER_URL_FIELD));
+        user.setHtmlUrl(jsonObject.getString(GitHubSchemas.USER_HTML_URL_FIELD));
+        user.setId(jsonObject.getInt(GitHubSchemas.USER_ID_FIELD));
+        user.setLogin(jsonObject.getString(GitHubSchemas.USER_LOGIN_FIELD));
+        return user;
+    }
 }

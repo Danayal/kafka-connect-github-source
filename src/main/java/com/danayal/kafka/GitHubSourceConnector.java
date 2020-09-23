@@ -1,4 +1,4 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import org.apache.kafka.connect.source.SourceConnector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class GitHubSourceConnector extends SourceConnector {
+public class   GitHubSourceConnector extends SourceConnector {
     private static Logger log = LoggerFactory.getLogger(GitHubSourceConnector.class);
     private GitHubSourceConnectorConfig config;
 
@@ -21,19 +21,21 @@ public class GitHubSourceConnector extends SourceConnector {
 
     @Override
     public void start(Map<String, String> map) {
+
         config = new GitHubSourceConnectorConfig(map);
     }
 
     @Override
     public Class<? extends Task> taskClass() {
+
         return GitHubSourceTask.class;
     }
 
     @Override
     public List<Map<String, String>> taskConfigs(int i) {
         // Define the individual task configurations that will be executed.
-        ArrayList<Map<String, String>> configs = new ArrayList<>(1);
-        configs.add(config.originalsStrings());
+        ArrayList<Map<String, String>> configs = new ArrayList<>(1); // this is used to populate the cofnigs
+        configs.add(config.originalsStrings()); //the original strings are added to config which is then returned into start()
         return configs;
     }
 
@@ -45,6 +47,7 @@ public class GitHubSourceConnector extends SourceConnector {
 
     @Override
     public ConfigDef config() {
+
         return GitHubSourceConnectorConfig.conf();
     }
 }

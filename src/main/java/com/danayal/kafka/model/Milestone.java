@@ -1,5 +1,5 @@
 
-package com.simplesteph.kafka.model;
+package com.danayal.kafka.model;
 
 import java.util.HashMap;
 import java.util.Map;

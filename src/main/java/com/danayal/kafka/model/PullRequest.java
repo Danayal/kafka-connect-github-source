@@ -1,11 +1,11 @@
 
-package com.simplesteph.kafka.model;
+package com.danayal.kafka.model;
 
+import com.danayal.kafka.GitHubSchemas;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import static com.simplesteph.kafka.GitHubSchemas.*;
 
 public class PullRequest {
 
@@ -104,8 +104,8 @@ public class PullRequest {
 
     public static PullRequest fromJson(JSONObject pull_request) {
         return new PullRequest()
-                .withUrl(pull_request.getString(PR_URL_FIELD))
-                .withHtmlUrl(pull_request.getString(PR_HTML_URL_FIELD));
+                .withUrl(pull_request.getString(GitHubSchemas.PR_URL_FIELD))
+                .withHtmlUrl(pull_request.getString(GitHubSchemas.PR_HTML_URL_FIELD));
 
     }
 }

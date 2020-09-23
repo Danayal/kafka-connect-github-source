@@ -1,9 +1,9 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import com.simplesteph.kafka.model.Issue;
+import com.danayal.kafka.model.Issue;
 import org.json.JSONObject;
 import org.junit.Test;
 
@@ -12,8 +12,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-import static com.simplesteph.kafka.GitHubAPIHttpClient.*;
-import static com.simplesteph.kafka.GitHubSourceConnectorConfig.*;
+import static com.danayal.kafka.GitHubAPIHttpClient.*;
+import static com.danayal.kafka.GitHubSourceConnectorConfig.*;
 import static org.junit.Assert.*;
 
 public class GitHubSourceTaskTest {

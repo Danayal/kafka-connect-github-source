@@ -1,10 +1,10 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
 import org.apache.kafka.connect.data.Schema;
 import org.apache.kafka.connect.data.SchemaBuilder;
 import org.apache.kafka.connect.data.Timestamp;
 
-public class GitHubSchemas {
+public class  GitHubSchemas {
 
     public static final String NEXT_PAGE_FIELD = "next_page";
 
@@ -32,10 +32,10 @@ public class GitHubSchemas {
     public static final String PR_HTML_URL_FIELD = "html_url";
 
     // Schema names
-    public static final String SCHEMA_KEY = "com.simplesteph.kafka.connect.github.IssueKey";
-    public static final String SCHEMA_VALUE_ISSUE = "com.simplesteph.kafka.connect.github.IssueValue";
-    public static final String SCHEMA_VALUE_USER = "com.simplesteph.kafka.connect.github.UserValue";
-    public static final String SCHEMA_VALUE_PR = "com.simplesteph.kafka.connect.github.PrValue";
+    public static final String SCHEMA_KEY = "com.danayal.kafka.connect.github.IssueKey";
+    public static final String SCHEMA_VALUE_ISSUE = "com.danayal.kafka.connect.github.IssueValue";
+    public static final String SCHEMA_VALUE_USER = "com.danayal.kafka.connect.github.UserValue";
+    public static final String SCHEMA_VALUE_PR = "com.danayal.kafka.connect.github.PrValue";
 
     // Key Schema
     public static final Schema KEY_SCHEMA = SchemaBuilder.struct().name(SCHEMA_KEY)

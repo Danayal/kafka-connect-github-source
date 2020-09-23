@@ -1,10 +1,10 @@
 
-package com.simplesteph.kafka.model;
+package com.danayal.kafka.model;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Creator {
+public class Assignee {
 
     private String login;
     private Integer id;
@@ -29,7 +29,7 @@ public class Creator {
      * No args constructor for use in serialization
      * 
      */
-    public Creator() {
+    public Assignee() {
     }
 
     /**
@@ -52,7 +52,7 @@ public class Creator {
      * @param organizationsUrl
      * @param starredUrl
      */
-    public Creator(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
+    public Assignee(String login, Integer id, String avatarUrl, String gravatarId, String url, String htmlUrl, String followersUrl, String followingUrl, String gistsUrl, String starredUrl, String subscriptionsUrl, String organizationsUrl, String reposUrl, String eventsUrl, String receivedEventsUrl, String type, Boolean siteAdmin) {
         super();
         this.login = login;
         this.id = id;
@@ -81,7 +81,7 @@ public class Creator {
         this.login = login;
     }
 
-    public Creator withLogin(String login) {
+    public Assignee withLogin(String login) {
         this.login = login;
         return this;
     }
@@ -94,7 +94,7 @@ public class Creator {
         this.id = id;
     }
 
-    public Creator withId(Integer id) {
+    public Assignee withId(Integer id) {
         this.id = id;
         return this;
     }
@@ -107,7 +107,7 @@ public class Creator {
         this.avatarUrl = avatarUrl;
     }
 
-    public Creator withAvatarUrl(String avatarUrl) {
+    public Assignee withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
     }
@@ -120,7 +120,7 @@ public class Creator {
         this.gravatarId = gravatarId;
     }
 
-    public Creator withGravatarId(String gravatarId) {
+    public Assignee withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
     }
@@ -133,7 +133,7 @@ public class Creator {
         this.url = url;
     }
 
-    public Creator withUrl(String url) {
+    public Assignee withUrl(String url) {
         this.url = url;
         return this;
     }
@@ -146,7 +146,7 @@ public class Creator {
         this.htmlUrl = htmlUrl;
     }
 
-    public Creator withHtmlUrl(String htmlUrl) {
+    public Assignee withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
     }
@@ -159,7 +159,7 @@ public class Creator {
         this.followersUrl = followersUrl;
     }
 
-    public Creator withFollowersUrl(String followersUrl) {
+    public Assignee withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
     }
@@ -172,7 +172,7 @@ public class Creator {
         this.followingUrl = followingUrl;
     }
 
-    public Creator withFollowingUrl(String followingUrl) {
+    public Assignee withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
     }
@@ -185,7 +185,7 @@ public class Creator {
         this.gistsUrl = gistsUrl;
     }
 
-    public Creator withGistsUrl(String gistsUrl) {
+    public Assignee withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
     }
@@ -198,7 +198,7 @@ public class Creator {
         this.starredUrl = starredUrl;
     }
 
-    public Creator withStarredUrl(String starredUrl) {
+    public Assignee withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
     }
@@ -211,7 +211,7 @@ public class Creator {
         this.subscriptionsUrl = subscriptionsUrl;
     }
 
-    public Creator withSubscriptionsUrl(String subscriptionsUrl) {
+    public Assignee withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
     }
@@ -224,7 +224,7 @@ public class Creator {
         this.organizationsUrl = organizationsUrl;
     }
 
-    public Creator withOrganizationsUrl(String organizationsUrl) {
+    public Assignee withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
     }
@@ -237,7 +237,7 @@ public class Creator {
         this.reposUrl = reposUrl;
     }
 
-    public Creator withReposUrl(String reposUrl) {
+    public Assignee withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
     }
@@ -250,7 +250,7 @@ public class Creator {
         this.eventsUrl = eventsUrl;
     }
 
-    public Creator withEventsUrl(String eventsUrl) {
+    public Assignee withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
     }
@@ -263,7 +263,7 @@ public class Creator {
         this.receivedEventsUrl = receivedEventsUrl;
     }
 
-    public Creator withReceivedEventsUrl(String receivedEventsUrl) {
+    public Assignee withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
     }
@@ -276,7 +276,7 @@ public class Creator {
         this.type = type;
     }
 
-    public Creator withType(String type) {
+    public Assignee withType(String type) {
         this.type = type;
         return this;
     }
@@ -289,7 +289,7 @@ public class Creator {
         this.siteAdmin = siteAdmin;
     }
 
-    public Creator withSiteAdmin(Boolean siteAdmin) {
+    public Assignee withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
     }
@@ -302,7 +302,7 @@ public class Creator {
         this.additionalProperties.put(name, value);
     }
 
-    public Creator withAdditionalProperty(String name, Object value) {
+    public Assignee withAdditionalProperty(String name, Object value) {
         this.additionalProperties.put(name, value);
         return this;
     }

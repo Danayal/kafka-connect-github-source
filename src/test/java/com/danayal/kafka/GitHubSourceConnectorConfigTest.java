@@ -1,4 +1,4 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.config.ConfigValue;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.simplesteph.kafka.GitHubSourceConnectorConfig.*;
+import static com.danayal.kafka.GitHubSourceConnectorConfig.*;
 import static org.junit.Assert.*;
 
 public class GitHubSourceConnectorConfigTest {

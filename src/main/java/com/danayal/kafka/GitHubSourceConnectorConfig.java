@@ -1,7 +1,7 @@
-package com.simplesteph.kafka;
+package com.danayal.kafka;
 
-import com.simplesteph.kafka.Validators.BatchSizeValidator;
-import com.simplesteph.kafka.Validators.TimestampValidator;
+import com.danayal.kafka.Validators.BatchSizeValidator;
+import com.danayal.kafka.Validators.TimestampValidator;
 import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
 import org.apache.kafka.common.config.ConfigDef.Type;

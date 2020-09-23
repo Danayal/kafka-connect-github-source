@@ -1,14 +1,13 @@
 
-package com.simplesteph.kafka.model;
+package com.danayal.kafka.model;
 
+import com.danayal.kafka.GitHubSchemas;
 import org.json.JSONObject;
 
 import java.time.Instant;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import static com.simplesteph.kafka.GitHubSchemas.*;
 
 public class Issue {
 
@@ -396,21 +395,21 @@ public class Issue {
     public static Issue fromJson(JSONObject jsonObject) {
 
         Issue issue = new Issue();
-        issue.withUrl(jsonObject.getString(URL_FIELD));
-        issue.withHtmlUrl(jsonObject.getString(HTML_URL_FIELD));
-        issue.withTitle(jsonObject.getString(TITLE_FIELD));
-        issue.withCreatedAt(Instant.parse(jsonObject.getString(CREATED_AT_FIELD)));
-        issue.withUpdatedAt(Instant.parse(jsonObject.getString(UPDATED_AT_FIELD)));
-        issue.withNumber(jsonObject.getInt(NUMBER_FIELD));
-        issue.withState(jsonObject.getString(STATE_FIELD));
+        issue.withUrl(jsonObject.getString(GitHubSchemas.URL_FIELD));
+        issue.withHtmlUrl(jsonObject.getString(GitHubSchemas.HTML_URL_FIELD));
+        issue.withTitle(jsonObject.getString(GitHubSchemas.TITLE_FIELD));
+        issue.withCreatedAt(Instant.parse(jsonObject.getString(GitHubSchemas.CREATED_AT_FIELD)));
+        issue.withUpdatedAt(Instant.parse(jsonObject.getString(GitHubSchemas.UPDATED_AT_FIELD)));
+        issue.withNumber(jsonObject.getInt(GitHubSchemas.NUMBER_FIELD));
+        issue.withState(jsonObject.getString(GitHubSchemas.STATE_FIELD));
 
         // user is mandatory
-        User user = User.fromJson(jsonObject.getJSONObject(USER_FIELD));
+        User user = User.fromJson(jsonObject.getJSONObject(GitHubSchemas.USER_FIELD));
         issue.withUser(user);
 
         // pull request is an optional fields
-        if (jsonObject.has(PR_FIELD)){
-            PullRequest pullRequest = PullRequest.fromJson(jsonObject.getJSONObject(PR_FIELD));
+        if (jsonObject.has(GitHubSchemas.PR_FIELD)){
+            PullRequest pullRequest = PullRequest.fromJson(jsonObject.getJSONObject(GitHubSchemas.PR_FIELD));
             issue.withPullRequest(pullRequest);
         }
 
